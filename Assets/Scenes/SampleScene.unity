@@ -208,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 20911953}
   - component: {fileID: 20911955}
+  - component: {fileID: 20911956}
   - component: {fileID: 20911954}
   m_Layer: 5
   m_Name: commence
@@ -335,6 +336,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20911952}
   m_CullTransparentMesh: 1
+--- !u!114 &20911956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20911952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c572dac25c8dfe4fb0ceeb26b28e3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeControl
+  fadeDuration: 1
 --- !u!1 &131745871
 GameObject:
   m_ObjectHideFlags: 0
