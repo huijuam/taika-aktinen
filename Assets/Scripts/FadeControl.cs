@@ -24,6 +24,16 @@ public class FadeControl : MonoBehaviour
         originalColor = FadeObject.color;
     }
 
+    public void FadeIn()
+    {
+        StartFade(originalColor.a);
+    }
+
+    public void FadeOut()
+    {
+        StartFade(0f);
+    }
+
     private void StartFade(float targetAlpha)
     {
         if (coroutine != null)
@@ -49,9 +59,8 @@ public class FadeControl : MonoBehaviour
 
             yield return null;
         }
-    }
-    Color final = fadeObject.color;
+    Color final = FadeObject.color;
     final.a = targetAlpha;
     FadeObject.color = final;
-
+    }
 }
