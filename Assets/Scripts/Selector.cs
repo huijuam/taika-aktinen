@@ -1,7 +1,10 @@
+using System.Collections;
 using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Selector : MonoBehaviour
 {
@@ -10,6 +13,9 @@ public class Selector : MonoBehaviour
     public TMP_Text[] items; // Meidän napit listassa
     public Color[] colors;
     private int index = 0;
+
+    public FadeControl fade;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,7 +43,26 @@ public class Selector : MonoBehaviour
 
     public void ActivateItem(int i)
     {
-        Debug.Log("Broston genuinely painaa " + items[i].text + "😭");
+        Debug.Log("Brosquito genuinely paino nappii " + items[i].text + "😭");
+
+        if (items[i].text == "Play")
+        {
+            StartCoroutine(ChangeScene("minipelit"));
+        }
+
+        else if (items[i].text == "Settings")
+        {
+            StartCoroutine(ChangeScene("Customization"));
+        }
+    }
+
+    private IEnumerator ChangeScene(string sceneName)
+    {
+        fade.FadeIn();
+
+        yield return new WaitForSeconds(fade.fadeDuration);
+
+        SceneManager.LoadScene(sceneName);
     }
 
     void ChangeColors()

@@ -211,6 +211,8 @@ GameObject:
   - component: {fileID: 20911957}
   - component: {fileID: 20911956}
   - component: {fileID: 20911954}
+  - component: {fileID: 20911959}
+  - component: {fileID: 20911958}
   m_Layer: 5
   m_Name: commence
   m_TagString: Untagged
@@ -364,6 +366,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RotationEffect
   speed: 2
   angle: 10
+--- !u!114 &20911958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20911952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1a4c759d24aaa48ab7d3e4935061aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverSelect
+  index: 0
+  selector: {fileID: 810756413}
+--- !u!114 &20911959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20911952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 20911954}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &131745871
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +435,7 @@ GameObject:
   - component: {fileID: 131745872}
   - component: {fileID: 131745874}
   - component: {fileID: 131745875}
+  - component: {fileID: 131745876}
   - component: {fileID: 131745873}
   m_Layer: 5
   m_Name: customization
@@ -516,6 +577,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RotationEffect
   speed: 2
   angle: 10
+--- !u!114 &131745876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131745871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1a4c759d24aaa48ab7d3e4935061aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverSelect
+  index: 1
+  selector: {fileID: 810756413}
 --- !u!1 &378902284
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +876,7 @@ GameObject:
   - component: {fileID: 810756412}
   - component: {fileID: 810756411}
   - component: {fileID: 810756413}
+  - component: {fileID: 810756414}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -855,9 +931,23 @@ MonoBehaviour:
   - {fileID: 131745873}
   - {fileID: 1410863785}
   colors:
-  - {r: 1, g: 1, b: 1, a: 0}
-  - {r: 1, g: 1, b: 1, a: 0}
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  fade: {fileID: 1508007880}
+--- !u!114 &810756414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810756410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c572dac25c8dfe4fb0ceeb26b28e3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeControl
+  fadeDuration: 1
 --- !u!1 &922174487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,6 +1095,7 @@ GameObject:
   - component: {fileID: 1410863784}
   - component: {fileID: 1410863786}
   - component: {fileID: 1410863787}
+  - component: {fileID: 1410863788}
   - component: {fileID: 1410863785}
   m_Layer: 5
   m_Name: end
@@ -1146,6 +1237,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RotationEffect
   speed: 2
   angle: 10
+--- !u!114 &1410863788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410863783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1a4c759d24aaa48ab7d3e4935061aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverSelect
+  index: 2
+  selector: {fileID: 810756413}
 --- !u!1 &1508007876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,7 +1303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.041680336, g: 0, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
