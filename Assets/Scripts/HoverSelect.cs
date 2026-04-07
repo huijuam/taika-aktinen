@@ -9,7 +9,7 @@ public class HoverSelect : MonoBehaviour, IPointerEnterHandler, IPointerClickHan
 
   public void OnPointerEnter(PointerEventData eventData)
     {
-      Debug.Log("Que pro");
+      selector.SetIndex(index);
     }
 
     public void OnPointerClick(PointerEventData eventData)
