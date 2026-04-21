@@ -3,12 +3,35 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
 
-    public float startSpeed = 6f;
+    public float speed = 6f;
+
+    public Rigidbody2D rb;
+
+    void Awake()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
 
+    void LaunchBall()
+    {
+        rb.linearVelocity = Vector2.zero;
+
+        Vector2 startDir = new Vector2(Random.Range(-0.7f, 0.7f), 1f);
+        rb.linearVelocity = startDir * speed;
+    }
+
+    void Update()
+    {
+        if (gameObject.transform.position.y <= -5)
+        {
+            Debug.Log("Folk😭😭😭😭😭😭😭");
+        }
+    }
 
 }
